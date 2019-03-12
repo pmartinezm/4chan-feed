@@ -7,19 +7,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/header.css">
   <title>Document</title>
 </head>
 
 <body>
-  <div class="content">
-    <div class="list">
-      
+  <div class="header">
+    <div class="header-title">
+      4chan feed
+    </div>
+    <div class="header-boards-cont">
+      <div class="board-link">
+        /o/
+      </div>
+      <span class="board-link-spacer"></span>
+      <div class="board-link">
+        /g/
+      </div>
+      <span class="board-link-spacer"></span>
+      <div class="board-link">
+        /s4s/
+      </div>
+      <span class="board-link-spacer"></span>
+      <button class="board-link" id="addBoardBtn">
+        /+/
+      </button>
     </div>
   </div>
-  <button id="boton" onclick="ocultar()">Hola buenas</button>
+  <div class="content">
+    <div class="list">
+
+    </div>
+  </div>
+  <button id="boton">Hola buenas</button>
 </body>
 
 </html>
+<script src="js/lib/jquery.js"></script>
+<script src="js/4chanFeed.js"></script>
 <script src="js/template/item.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/main.js"></script>
+<script src="js/boards/loader.js"></script>
+<script src="js/boards/gestor.js"></script>
+<script src="js/events/eventHandler.js"></script>
