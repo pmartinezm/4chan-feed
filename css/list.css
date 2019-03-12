@@ -1,0 +1,38 @@
+.list{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border: solid 2px white;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.list-entry {
+  border: solid 2px white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.list-entry-data-sub {
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.list-entry-data {
+  width: 100%;
+}
+
+.list-entry-img-cont {
+  width: 15t%;
+  padding-right: 20px;
+}
+
+.list-entry-img {
+  display: block;
+    width: 100%;
+    height: auto;
+
+}

@@ -1,7 +1,7 @@
-var board = "m";
+var board = "o";
 
 var ocultar = function() {
-  var content = document.getElementsByClassName("content")[0];
+  var content = document.getElementsByClassName("list")[0];
   content.innerHTML = "";
   $.get("https://cors-anywhere.herokuapp.com/http://a.4cdn.org/" + board + "/catalog.json", function(data, status) {
     console.log("Estoy dentro de la función del get");
@@ -10,9 +10,7 @@ var ocultar = function() {
 
     for (var i = 0; i < data.length; i++) {
       var obj = data[i];
-      console.log(obj.page);
       for (var j = 0; j < obj.threads.length; j++) {
-        console.log(" ", obj.threads[j].no);
         var thread = obj.threads[j];
 
         content.innerHTML += generateItem(thread);
@@ -22,7 +20,7 @@ var ocultar = function() {
 }
 
 var generateItem = function(thread) {
-  var item = itemTMPL;
+  var item = listTMPL;
   var tim = thread.tim;
   var ext = thread.ext;
   var com = thread.com;
