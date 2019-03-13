@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/list.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/modal.css">
   <title>Document</title>
 </head>
 
@@ -18,19 +19,10 @@
       4chan feed
     </div>
     <div class="header-boards-cont">
-      <div class="board-link">
-        /o/
+      <div class="header-board-link-cont">
       </div>
-      <span class="board-link-spacer"></span>
-      <div class="board-link">
-        /g/
-      </div>
-      <span class="board-link-spacer"></span>
-      <div class="board-link">
-        /s4s/
-      </div>
-      <span class="board-link-spacer"></span>
-      <button class="board-link" id="addBoardBtn">
+      <span class="board-link-spacer full-spacer"></span>
+      <button class="board-link" id="showModalBtn">
         /+/
       </button>
     </div>
@@ -41,6 +33,23 @@
     </div>
   </div>
   <button id="boton">Hola buenas</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Add board</h2>
+      </div>
+      <div class="modal-body">
+        <p>Board name</p>
+        <input type="text" id="inputBoardName">
+        <button id="addBoardBtn">Add</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
@@ -50,3 +59,5 @@
 <script src="js/boards/loader.js"></script>
 <script src="js/boards/gestor.js"></script>
 <script src="js/events/eventHandler.js"></script>
+<script src="js/controller/modalController.js"></script>
+<script src="js/controller/uiController.js"></script>

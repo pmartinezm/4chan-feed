@@ -1,6 +1,6 @@
 app.namespace("app.template");
 
-app.template = {
+app.template.thread = {
   grid: `<div class="item">
     <div class="item-image-cont">
       <a href="$HREF%""><img class="item-image" src="$URL%" alt=""></a>
@@ -28,4 +28,11 @@ app.template = {
           </div>
         </div>
       </div>`
+};
+
+app.template.header = {
+  boardLink: `<button class="board-link">
+    $BOARD%
+  </button>
+  <span class="board-link-spacer"></span>`
 };

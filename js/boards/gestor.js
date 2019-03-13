@@ -1,7 +1,13 @@
 app.namespace("app.gestor");
 
-(function(g){
+(function(g) {
   app.gestor.createBoard = function(board) {
-    app.ls.setItem("TEST", "test");
+    var button = {
+      id: board,
+      name: "/" + board + "/",
+      letter: board
+    };
+    app.ls.setItem(button.id, JSON.stringify(button));
+    app.uiController.refreshBoardLinks();
   }
 })();

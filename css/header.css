@@ -19,6 +19,13 @@
   padding: 5px;
 }
 
+.header-boards-cont button{
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+}
+
 .board-link {
   width: 75px;
   text-align: center;
@@ -26,4 +33,9 @@
 
 .board-link-spacer {
   border: solid 1px rgba(0, 0, 0, 0.5);
+}
+
+.full-spacer {
+  border: none;
+  width: 100%;
 }

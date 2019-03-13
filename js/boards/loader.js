@@ -11,9 +11,6 @@ app.namespace("app.loader");
     var content = document.getElementsByClassName("list")[0];
     content.innerHTML = "";
     $.get("https://cors-anywhere.herokuapp.com/http://a.4cdn.org/" + board + "/catalog.json", function(data, status) {
-      console.log("Estoy dentro de la función del get");
-      console.log(data);
-      console.log(status);
 
       for (var i = 0; i < data.length; i++) {
         var obj = data[i];
