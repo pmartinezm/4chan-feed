@@ -26,6 +26,11 @@
   font-size: inherit;
 }
 
+.header-board-link-cont{
+  display: flex;
+  flex-direction: row;
+}
+
 .board-link {
   width: 75px;
   text-align: center;
