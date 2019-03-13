@@ -19,7 +19,7 @@ app.namespace("app.controller.modalController");
       if (boardName.length > 0) {
         app.boards.gestor.createBoard(boardName);
         input.value = "";
-        app.modalController.dismiss();
+        app.controller.modalController.dismiss();
       }
     }
   };

@@ -20,12 +20,12 @@ app.namespace("app.boards.loader");
 
   app.boards.loader.generateItem = function(thread, board) {
     var item = app.template.thread.list;
-    var tim = thread.tim;
-    var ext = thread.ext;
-    var com = thread.com;
-    var sub = thread.sub;
-    var url = "https://i.4cdn.org/" + board + "/" + tim + ext;
-    var href = "https://boards.4channel.org/" + board + "/thread/" + thread.no;
-    return item.replace("$URL%", url).replace("$COM%", com).replace("$SUB%", sub).replace("$HREF%", href);
+    var tim = thread.tim; //idk.
+    var ext = thread.ext; //File extension.
+    var com = thread.com; //Post subtitle.
+    var sub = thread.sub; //Post title.
+    var imgUrl = app.util.links.thumbnail(board, tim);
+    var linkHref = "https://boards.4channel.org/" + board + "/thread/" + thread.no;
+    return item.replace("$IMGURL%", imgUrl).replace("$COM%", com).replace("$SUB%", sub).replace("$LINKHREF%", linkHref);
   }
 })();

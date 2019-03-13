@@ -16,7 +16,7 @@ app.template.thread = {
   </div>`,
   list: `<div class="list-entry">
   <div class="list-entry-img-cont">
-  <a href="$HREF%"><img class="list-entry-img" src="$URL%"></a>
+  <a href="$LINKHREF%"><img class="list-entry-img" src="$IMGURL%"></a>
   </div>
         <div class="list-entry-data">
           <div class="list-entry-data-sub">

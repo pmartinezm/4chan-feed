@@ -1,0 +1,43 @@
+js
+  -boards
+    -gestor:
+      Add board to the header board list.
+
+    -loader:
+      Load board catalog.
+      Generate list item to show board threads.
+
+  -controller
+    -modalController:
+      Shows the modal.
+      Closes the modal.
+
+    -uiController:
+      Updates board list in header.
+      Creates a button to show a link in header board list.
+
+  -events
+    -eventHandler:
+      Add an event to button /+/ to show the modal.
+
+  -init
+    -init:
+      Update the header board list on application start.
+
+  -lib
+    -jquery:
+      Jquery library.
+
+  -template
+    -header:
+      Templates for the header.
+
+    -thread:
+      Templates for threads/catalog thread list.
+
+  -util
+    -links:
+      Function to get full links for the resources.
+
+  -4chanFeed:
+    App and global functions/variables.
