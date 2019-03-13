@@ -1,7 +1,7 @@
-app.namespace("app.modalController");
+app.namespace("app.controller.modalController");
 
 (function(g) {
-  app.modalController.show = function() {
+  app.controller.modalController.show = function() {
     var modal = document.getElementById('myModal');
 
     var btnAdd = document.getElementById("addBoardBtn");
@@ -17,14 +17,14 @@ app.namespace("app.modalController");
       var input = document.getElementById("inputBoardName");
       var boardName = input.value;
       if (boardName.length > 0) {
-        app.gestor.createBoard(boardName);
+        app.boards.gestor.createBoard(boardName);
         input.value = "";
         app.modalController.dismiss();
       }
     }
   };
 
-  app.modalController.dismiss = function() {
+  app.controller.modalController.dismiss = function() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
   }

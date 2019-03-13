@@ -1,4 +1,4 @@
-app.namespace("app.template");
+app.namespace("app.template.thread");
 
 app.template.thread = {
   grid: `<div class="item">
@@ -28,11 +28,4 @@ app.template.thread = {
           </div>
         </div>
       </div>`
-};
-
-app.template.header = {
-  boardLink: `<button class="board-link">
-    $BOARD%
-  </button>
-  <span class="board-link-spacer"></span>`
 };

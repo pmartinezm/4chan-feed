@@ -1,11 +1,7 @@
-app.namespace("app.loader");
+app.namespace("app.boards.loader");
 
 (function(g) {
-  document.getElementById("boton").addEventListener("click", function() {
-    app.loader.loadBoard("o");
-  });
-
-  app.loader.loadBoard = function(board) {
+  app.boards.loader.loadBoard = function(board) {
     console.log("Loading data...");
 
     var content = document.getElementsByClassName("list")[0];
@@ -16,13 +12,13 @@ app.namespace("app.loader");
         for (var j = 0; j < obj.threads.length; j++) {
           var thread = obj.threads[j];
 
-          content.innerHTML += app.loader.generateItem(thread, board);
+          content.innerHTML += app.boards.loader.generateItem(thread, board);
         }
       }
     });
   }
 
-  app.loader.generateItem = function(thread, board) {
+  app.boards.loader.generateItem = function(thread, board) {
     var item = app.template.thread.list;
     var tim = thread.tim;
     var ext = thread.ext;

@@ -1,7 +1,7 @@
-app.namespace("app.eventHandler");
+app.namespace("app.events.eventHandler");
 
 (function(g) {
   document.getElementById("showModalBtn").addEventListener("click", function() {
-    app.modalController.show();
+    app.controller.modalController.show();
   });
 })();

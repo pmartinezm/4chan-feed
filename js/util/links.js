@@ -1,6 +1,6 @@
-app.namespace("app.links");
+app.namespace("app.util.links");
 
-app.links = {
+app.util.links = {
   catalog: function(board) {
     return "https://a.4cdn.org/" + board + "/catalog.json";
   }

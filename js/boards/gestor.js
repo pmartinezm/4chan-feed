@@ -1,7 +1,7 @@
-app.namespace("app.gestor");
+app.namespace("app.boards.gestor");
 
 (function(g) {
-  app.gestor.createBoard = function(boardName) {
+  app.boards.gestor.createBoard = function(boardName) {
     var boardsJson = app.ls.getItem("boards");
     var boards = JSON.parse(boardsJson);
     var board = {
@@ -11,6 +11,6 @@ app.namespace("app.gestor");
     boards.board.push(board);
     boardsJson =JSON.stringify(boards);
     app.ls.setItem("boards", boardsJson);
-    app.uiController.refreshBoardLinks();
+    app.controller.uiController.refreshBoardLinks();
   }
 })();

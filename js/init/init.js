@@ -1,5 +1,5 @@
 app.namespace("app.init");
 
 (function(g){
-  app.uiController.refreshBoardLinks();
+  app.controller.uiController.refreshBoardLinks();
 })();
