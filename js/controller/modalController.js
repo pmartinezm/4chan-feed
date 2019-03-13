@@ -9,7 +9,6 @@ app.namespace("app.modalController");
 
     modal.style.display = "block";
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
       modal.style.display = "none";
     }
@@ -17,7 +16,16 @@ app.namespace("app.modalController");
     btnAdd.onclick = function() {
       var input = document.getElementById("inputBoardName");
       var boardName = input.value;
-      app.gestor.createBoard(boardName);
+      if (boardName.length > 0) {
+        app.gestor.createBoard(boardName);
+        input.value = "";
+        app.modalController.dismiss();
+      }
     }
+  };
+
+  app.modalController.dismiss = function() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
   }
 })();

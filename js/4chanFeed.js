@@ -20,3 +20,13 @@ app.namespace = function(ns) {
 
   return parent;
 };
+
+(function(g) {
+  if (app.ls.length === 0) {
+    var boards = {
+      board: []
+    };
+    var json = JSON.stringify(boards);
+    app.ls.setItem("boards", json);
+  }
+})();

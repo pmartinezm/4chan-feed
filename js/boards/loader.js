@@ -11,7 +11,6 @@ app.namespace("app.loader");
     var content = document.getElementsByClassName("list")[0];
     content.innerHTML = "";
     $.get("https://cors-anywhere.herokuapp.com/http://a.4cdn.org/" + board + "/catalog.json", function(data, status) {
-
       for (var i = 0; i < data.length; i++) {
         var obj = data[i];
         for (var j = 0; j < obj.threads.length; j++) {
@@ -24,7 +23,7 @@ app.namespace("app.loader");
   }
 
   app.loader.generateItem = function(thread, board) {
-    var item = app.template.list;
+    var item = app.template.thread.list;
     var tim = thread.tim;
     var ext = thread.ext;
     var com = thread.com;
