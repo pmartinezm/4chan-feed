@@ -2,7 +2,7 @@ app.namespace("app.boards.loader");
 
 (function(g) {
   app.boards.loader.loadBoard = function(board) {
-    console.log("Loading data...");
+    console.log("Loading catalog...");
 
     var content = document.getElementsByClassName("list")[0];
     content.innerHTML = "";

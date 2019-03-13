@@ -5,7 +5,7 @@ js
 
     -loader:
       Load board catalog.
-      Generate list item to show board threads.
+      Generate list entry to show board threads.
 
   -controller
     -modalController:
@@ -34,6 +34,12 @@ js
 
     -thread:
       Templates for threads/catalog thread list.
+
+  -threads
+    -loader:
+      Load thread replies.
+      Generate list entry to show thread replies.
+      Generate list entry to show OP first message.
 
   -util
     -links:
