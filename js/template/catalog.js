@@ -1,6 +1,6 @@
-app.namespace("app.template.thread");
+app.namespace("app.template.catalog");
 
-app.template.thread = {
+app.template.catalog = {
   thread: `<div class="list-entry catalog">
   <div class="list-entry-img-cont">
   <a href="$LINKHREF%"><img class="list-entry-img" src="$IMGURL%"></a>

@@ -12,18 +12,18 @@ app.namespace("app.boards.loader");
         for (var j = 0; j < obj.threads.length; j++) {
           var thread = obj.threads[j];
 
-          content.innerHTML += app.boards.loader.generateItem(thread, board);
+          content.innerHTML += app.boards.loader.generateCatalogEntry(thread, board);
         }
       }
     });
   }
 
-  app.boards.loader.generateItem = function(thread, board) {
-    var item = app.template.thread.list;
+  app.boards.loader.generateCatalogEntry = function(thread, board) {
+    var item = app.template.catalog.thread;
     var tim = thread.tim; //idk.
     var ext = thread.ext; //File extension.
-    var com = thread.com; //Post subtitle.
-    var sub = thread.sub; //Post title.
+    var com = thread.com || ""; //Post subtitle.
+    var sub = thread.sub || ""; //Post title.
     var imgUrl = app.util.links.thumbnail(board, tim);
     var linkHref = "https://boards.4channel.org/" + board + "/thread/" + thread.no;
     return item.replace("$IMGURL%", imgUrl).replace("$COM%", com).replace("$SUB%", sub).replace("$LINKHREF%", linkHref);
