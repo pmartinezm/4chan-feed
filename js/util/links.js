@@ -6,5 +6,8 @@ app.util.links = {
   },
   thumbnail: function(board, tim) {
     return "https://i.4cdn.org/" + board + "/" + tim + "s.jpg";
+  },
+  thread: function(board, thread) {
+    return "https://a.4cdn.org/" + board + "/thread/" + thread + ".json";
   }
 };

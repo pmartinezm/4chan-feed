@@ -4,15 +4,31 @@ app.namespace("app.boards.loader");
   app.boards.loader.loadBoard = function(board) {
     console.log("Loading catalog...");
 
-    var content = document.getElementsByClassName("list")[0];
+    var content = document.getElementsByClassName("list-catalog")[0];
     content.innerHTML = "";
     $.get("https://cors-anywhere.herokuapp.com/http://a.4cdn.org/" + board + "/catalog.json", function(data, status) {
+      console.log(data.length);
+      console.log(data);
       for (var i = 0; i < data.length; i++) {
         var obj = data[i];
         for (var j = 0; j < obj.threads.length; j++) {
           var thread = obj.threads[j];
 
           content.innerHTML += app.boards.loader.generateCatalogEntry(thread, board);
+        }
+      }
+      var images = document.getElementsByClassName("list-entry-img");
+      var img = 0;
+      for (var i = 0; i < data.length; i++) {
+        var obj = data[i];
+        for (var j = 0; j < obj.threads.length; j++) {
+          var thread = obj.threads[j];
+          images[img].addEventListener("click", function() {
+            document.getElementsByClassName("list-catalog")[0].style.display= "none";
+            document.getElementsByClassName("list-thread")[0].style.display= "block";
+            app.threads.loader.loadThread(board, thread.no);
+          });
+          img++;
         }
       }
     });
